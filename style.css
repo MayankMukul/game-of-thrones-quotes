@@ -13,3 +13,11 @@
     /* margin: 2rem 7rem; */
     padding: 2rem;
 }
+
+.container {
+    min-height: 185px;
+}
+
+#more-quotes-box{
+    min-height: 280px
+}

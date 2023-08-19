@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chracters</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chracters</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <nav class="navbar bg-body-tertiary p-4" data-bs-theme = "dark">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-1 "><a class="link" href="home.html">Game of Thrones Quotes</a></span>
-          <span class="navbar-brand mb-1 "><a class="link" href="home.html">Home</a></span>
-        </div>
-      </nav>
+  <nav class="navbar bg-body-tertiary p-4" data-bs-theme="dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-1 "><a class="link" href="home.html">Game of Thrones Quotes</a></span>
+      <span class="navbar-brand mb-1 "><a class="link" href="home.html">Home</a></span>
+    </div>
+  </nav>
 
-      <div class="container my-5">
+  <div class="container my-5">
+    <div class="card w-75 m-auto ">
+      <div class="card-header">
+        <h4>Get Qutes for...</h4>
+      </div>
+      <div class="body">
+        <div class="input-group p-4">
+          <select class="form-select" id="inputGroupSelect04">
+            <option selected>Choose Character...</option>
+            <option value="jon">Jon Snow</option>
+            <option value="sansa">Sansa Stark</option>
+            <option value="eddard">Eddard Ned Stark</option>
+            <option value="catelyn">Catelyn Stark</option>
+            <option value="jaime">Jaime Lannister</option>
+            <option value="tyrion">Tyrion Lannister</option>
+            <option value="cersei">Cersei Lannister</option>
+            <option value="joffrey">Joffrey Baratheon</option>
+            <option value="aerys">Aerys II Targaryen</option>
+            <option value="aemon">Aemon Targaryen</option>
+            <option value="daenerys">Daenerys Targaryen</option>
+            <option value="tywin">Tywin Lannister</option>
+            <option value="ramsay">Ramsay Bolton</option>
+            <option value="arya">Arya Stark</option>
+            <option value="robert">Robert Baratheon</option>
+            <option value="theon">Theon Greyjoy</option>
+            <option value="samwell">Samwell Tarly</option>
+            <option value="lord">Lord Varys</option>
+            <option value="bran">Bran Stark</option>
+            <option value="brienne">Brienne of Tharth</option>
+            <option value="petyr">Petyr Baelish</option>
+            <option value="tormund">Tormund</option>
+            <option value="melisandre">Melisandre</option>
+            <option value="olenna">Olenna Tyrell</option>
+            <option value="mance">Mance Rayder</option>
+            <option value="ygritte">Ygritte</option>
 
-        <div class="card w-75 m-auto ">
-            <div class="card-header">
-                <h4>Get Qutes for...</h4>
-              </div>
-            <div class="body">
-                <div class="input-group p-4">
-                    <select class="form-select" id="inputGroupSelect04" >
-                      <option selected>Choose Character...</option>
-                        <option value="Jon Snow">Jon Snow</option>
-                        <option value="Sansa Stark">Sansa Stark</option>
-                        <option value="Eddard Ned Stark">Eddard Ned Stark</option>
-                        <option value="Catelyn Stark">Catelyn Stark</option>
-                        <option value="Jaime Lannister">Jaime Lannister</option>
-                        <option value="Tyrion Lannister">Tyrion Lannister</option>
-                        <option value="Cersei Lannister">Cersei Lannister</option>
-                        <option value="Joffrey Baratheon">Joffrey Baratheon</option>
-                        <option value="Aerys II Targaryen">Aerys II Targaryen</option>
-                        <option value="Aemon Targaryen">Aemon Targaryen</option>
-                        <option value="Daenerys Targaryen">Daenerys Targaryen</option>
-                        <option value="Tywin Lannister">Tywin Lannister</option>
-                        <option value="Ramsay Bolton">Ramsay Bolton</option>
-                        <option value="Arya Stark">Arya Stark</option>
-                        <option value="Robert Baratheon">Robert Baratheon</option>
-                        <option value="Theon Greyjoy">Theon Greyjoy</option>
-                        <option value="Samwell Tarly">Samwell Tarly</option>
-                        <option value="Lord Varys">Lord Varys</option>
-                        <option value="Bran Stark">Bran Stark</option>
-                        <option value="Brienne of Tharth">Brienne of Tharth</option>
-                        <option value="Petyr Baelish">Petyr Baelish</option>
-                        <option value="Tormund">Tormund</option>
-                        <option value="Melisandre">Melisandre</option>
-                        <option value="Olenna Tyrell">Olenna Tyrell</option>
-                        <option value="Mance Rayder">Mance Rayder</option>
-                        <option value="Ygritte">Ygritte</option>
-                      
-                    </select>
-                    <button id="btn-option" class="btn btn-outline-secondary" type="button">Get Quotes</button>
-                  </div>
-                
-            </div>
+          </select>
+          <button id="btn-option" class="btn btn-outline-secondary" type="button">Get Quotes</button>
         </div>
 
-        <div class="card w-75 m-auto my-5">
-            <div class="card-header">
-              <h4>Some More Quotes</h4>
-            </div>
-            <div class="errormsg text-center"></div>
-            <div class="more-quote">
-                  <p id="qot" class="text-center">Fetching quote.....</p>
-              </div>
-            </div>
-        </div>
-
+      </div>
     </div>
 
-      <div class="footer">
-        <nav class="navbar bg-body-tertiary p-4" data-bs-theme = "dark">
-          <div class="container-fluid ">
-            <span class="navbar-brand mb-0 m-auto">Made by <a href="http://github.com/mayankmukul" class="link">@ Mayank Mukul</a></span>
-          </div>
-        </nav>
+    <div id="more-quotes-box" class="card w-75 m-auto my-5">
+      <div class="card-header">
+        <h4>Some More Quotes</h4>
       </div>
+      <div class="errormsg text-center"></div>
+      <div class="more-quote">
+        <p id="qot" class="text-center">Fetching quote.....</p>
+      </div>
+    </div>
+  </div>
 
-    
+  </div>
 
-      <script src="character.js"></script>
+  <div class="footer">
+    <nav class="navbar bg-body-tertiary p-4" data-bs-theme="dark">
+      <div class="container-fluid ">
+        <span class="navbar-brand mb-0 m-auto">Made by <a href="http://github.com/mayankmukul" class="link">@ Mayank Mukul</a></span>
+      </div>
+    </nav>
+  </div>
+
+
+
+  <script src="character.js"></script>
 </body>
+
 </html>

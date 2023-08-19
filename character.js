@@ -3,21 +3,26 @@ let name1 = document.querySelector(".name");
 let blockquote = document.querySelector("blockquote");
 let morequotesbox = document.querySelector(".more-quote");
 let errormsg = document.querySelector(".errormsg");
-let select = qocument.querySelector("select");
+let select = document.querySelector("select");
 let btn = document.querySelector("#btn-option")
 
 
-let url = "https://api.gameofthronesquotes.xyz/v1/author/tyrion/3"
+let url = "https://api.gameofthronesquotes.xyz/v1/author/"
 
+function newurl(value){
+     return(`${url}${value}/3`);
+}
 function morequotes(){
 
-    let more = fetch(url);
+     newurl(select.value);
+     //console.log(newurl(select.value));
+    let more = fetch(newurl(select.value));
     more.then((value)=>{
          return value.json();
     }).catch(()=>{
          errormsg.innerHTML=`<span style="color:red">SERVER DID NOT RESPOND</span>`;
     }).then((value)=>{
-            console.log(value);
+            //console.log(value);
          let ihtml = " "
          for(let i in value){
               ihtml += `
@@ -28,7 +33,7 @@ function morequotes(){
                     </blockquote>
               </div>
               `;
-              console.log(value[i].sentence);
+              
          }
          
          morequotesbox.innerHTML=ihtml;
@@ -38,4 +43,9 @@ function morequotes(){
     })
 }
 
-btn.addEventListener=morequotes();
+function display() {
+     console.log(newurl(select.value));
+     console.log("hello");
+}
+
+btn.addEventListener("click",morequotes)
