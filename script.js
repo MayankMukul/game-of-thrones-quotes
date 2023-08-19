@@ -5,7 +5,6 @@ let morequotesbox = document.querySelector(".more-quote");
 let errormsg = document.querySelector(".errormsg")
 
 let url = "https://api.gameofthronesquotes.xyz/v1/random";
-//let random5url = "https://api.gameofthronesquotes.xyz/v1/random//";
 
 function morequotes(){
      let more = fetch(url+"/5");
