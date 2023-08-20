@@ -1,4 +1,7 @@
 
+body {
+    min-height: 100vh;
+}
 #qot {
     font-style: italic;
 }
@@ -19,5 +22,15 @@
 }
 
 #more-quotes-box{
-    min-height: 280px
+    min-height: 280px;
+    /* display: none; */
+}
+
+.more-quote {
+    display: none;
+}
+
+.errormsg {
+    font-style: italic;
+    display: none;
 }

@@ -11,9 +11,11 @@ function morequotes(){
      more.then((value)=>{
           return value.json();
      }).catch(()=>{
+          errormsg.style.display="block";
           errormsg.innerHTML=`<span style="color:red">SERVER DID NOT RESPOND</span>`;
      }).then((value)=>{
           //console.log(value);
+          morequotesbox.style.display="block";
           let ihtml = " "
           for(let i in value){
                ihtml += `
