@@ -1,6 +1,7 @@
 let qot = document.querySelector("#qot");
 let name1 = document.querySelector(".name");
-let morequotesbox = document.querySelector(".more-quote");
+let morequote = document.querySelector(".more-quote");
+morequotesbox = document.querySelector("#more-quotes-box")
 let errormsg = document.querySelector(".errormsg");
 let select = document.querySelector("select");
 let btn = document.querySelector("#btn-option")
@@ -15,18 +16,20 @@ function newurl(value){
 function display() {
      errormsg.style.display="none";
      if(select.value!='Choose Character...'){
-          morequotesbox.style.display="block";
+          morequote.style.display="block";
           return true;
      } else {
           errormsg.style.display="block";
          errormsg.innerHTML=`<span style="color:red">*Please select a character first.</span>`;
-         morequotesbox.style.display="none";
+         morequote.style.display="none";
          return false;
      }
      
 }
 
 function morequotes(){
+     morequotesbox.style.display=("block");
+     morequote.style.display=("block");
      if(display()){
     let more = fetch(newurl(select.value));
     more.then((value)=>{
@@ -48,7 +51,7 @@ function morequotes(){
               
          }
          
-         morequotesbox.innerHTML=ihtml;
+         morequote.innerHTML=ihtml;
          
     }).catch(()=>{
          qot.innerHTML=`<span style="color:red">Quote not found</span>`

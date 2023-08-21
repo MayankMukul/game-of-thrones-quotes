@@ -1,6 +1,7 @@
 let qot = document.querySelector("#qot");
 let name1 = document.querySelector(".name");
-let morequotesbox = document.querySelector(".more-quote");
+let morequote = document.querySelector(".more-quote");
+let morequotesbox = document.querySelector("#more-quotes-box")
 let errormsg = document.querySelector(".errormsg");
 let select = document.querySelector("select");
 let btn = document.querySelector("#btn-option")
@@ -15,18 +16,19 @@ function newurl(value){
 function display() {
      errormsg.style.display="none";
      if(select.value!='Choose option'){
-          morequotesbox.style.display="block";
+          morequote.style.display="block";
           return true;
      } else {
           errormsg.style.display="block";
          errormsg.innerHTML=`<span style="color:red">*Please select a option first.</span>`;
-         morequotesbox.style.display="none";
+         morequote.style.display="none";
          return false;
      }
      
 }
 
 function morequotes(){
+     morequotesbox.style.display=("block");
      if(display()){
     let more = fetch(newurl(select.value));
     more.then((value)=>{
@@ -35,15 +37,15 @@ function morequotes(){
           errormsg.style.display="block";
          errormsg.innerHTML=`<span style="color:red">*SERVER DID NOT RESPOND</span>`;
     }).then((value)=>{
-        // console.log('data',value);
+        
          let ihtml = " ";
          for(let i in value[0].members){
-            // console.log(value[0].members);
+            
               ihtml += `<p >${value[0].members[i].name}</p>`
               
          }
          
-         morequotesbox.innerHTML=
+         morequote.innerHTML=
          `
               <div class="card-body my-2">
                     <blockquote class="blockquote mb-0 text-center">

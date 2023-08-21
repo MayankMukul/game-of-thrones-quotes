@@ -12,18 +12,17 @@ body {
 }
 
 .character{
-    
-    /* margin: 2rem 7rem; */
     padding: 2rem;
 }
 
 .container {
-    min-height: 185px;
+    min-height: 469px;
+    margin: 3rem;
 }
 
 #more-quotes-box{
     min-height: 280px;
-    /* display: none; */
+     display: none; 
 }
 
 .more-quote {
@@ -33,6 +32,7 @@ body {
 .errormsg {
     font-style: italic;
     display: none;
+    font-size: 1.5rem;
 }
 
 table > caption {
