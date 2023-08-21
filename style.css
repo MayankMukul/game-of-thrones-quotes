@@ -1,7 +1,10 @@
 
 body {
-    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 #qot {
     font-style: italic;
 }
@@ -16,7 +19,7 @@ body {
 }
 
 .container {
-    min-height: 469px;
+   
     margin: 3rem;
 }
 
@@ -37,4 +40,8 @@ body {
 
 table > caption {
     text-align: center;
+}
+
+.footer{
+    margin-top:auto ;
 }
