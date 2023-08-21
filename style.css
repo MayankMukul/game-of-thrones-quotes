@@ -45,3 +45,12 @@ table > caption {
 .footer{
     margin-top:auto ;
 }
+
+@media screen and (max-width:450px) {
+    .input-group {
+        flex-direction: column;
+    }
+    #inputGroupSelect04{
+        width: 100%;
+    }
+}
